@@ -1,0 +1,21 @@
+.header {
+ width: 100%;
+ height: 6vh;
+ background-color: blue;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+.listLinks {
+ display: flex;
+ gap: 1vw;
+ list-style: none;
+ font-size: 1.4rem;
+}
+.listLinks li a {
+ text-decoration: none;
+ color: white;
+ padding-bottom: 17px;
+ padding-top: 7px;
+ padding-inline: 7px;
+}
