@@ -1,0 +1,132 @@
+.main {
+ display: flex;
+ flex-direction: column;
+ min-height: 100vh;
+ min-width: 100%;
+}
+.header {
+ height: 9vh;
+ min-width: 100%;
+ box-shadow: 1px 0 15px rgba(0, 0, 0, 0.425);
+ z-index: 1;
+}
+.linkList a:hover{
+ opacity: 0.7;
+}
+.nav {
+ height: 60px;
+ width: 100%;
+ display: flex;
+ align-items: center;
+ justify-content: space-around;
+}
+.imageLogo {
+ width: 25vh;
+ height: 50px;
+}
+.linkList {
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+ list-style: none;
+ gap: 10px;
+}
+.linkList a {
+ text-decoration: none;
+ color: black;
+}
+.labelMenu, .checkbox {
+  display: none;
+}
+@media (max-width: 900px) {
+  .labelMenu {
+    display: block;
+    padding: 1rem;
+    color: #000;
+    cursor: pointer;
+  }
+  .linkList {
+    display: block;
+    display: flex;
+    font-size: 2rem;
+    position: absolute;
+    top: 6vh;
+    right: 0;
+    background-color: rgba(216, 216, 216, 0.795);
+    text-align: center;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 94vh;
+    width: 0vw;
+    z-index: 9;
+    transition: 0.2s;
+    overflow: hidden;
+    visibility: hidden;
+  }
+  .linkList a {
+    padding: 1rem 0;
+    margin-inline: 1rem;
+    border-bottom: 0.0625rem solid #535252;
+    border-radius: 0;
+  }
+  .hamburger {
+    display: block;
+    border-top: 0.125rem solid;
+    width: 1.25rem;
+  }
+  .hamburger::before, 
+  .hamburger::after {
+    transition: 0.3s;
+    position: relative;
+    content: " ";
+    display: block;
+    width: 1.25rem;
+    height: 0.125rem;
+    background: currentColor;
+    margin-top: 0.3125rem
+  }
+  .checkbox:checked ~ .linkList {
+    width: 70vw;
+    visibility: visible;
+    overflow: auto;
+  }
+  .checkbox:checked ~ .labelMenu .hamburger{
+    border-top-color: transparent;
+
+  }
+  .checkbox:checked ~ .labelMenu .hamburger::before{
+    transform: rotate(135deg);
+  }
+  .checkbox:checked ~ .labelMenu .hamburger::after{
+    transform: rotate(-135deg);
+    top: -0.4375rem;
+  }
+}
+.footer {
+  display:flex;
+  justify-content: center;
+  width: 100%;
+  height: 7vh;
+  align-items: center;
+  gap: 1.3rem;
+  box-shadow: 0px -10px 10px -10px rgba(0, 0, 0, 0.63);
+}
+.imageLogo2 {
+  height: 6vh;
+  width: 25vw;
+ 
+}
+.footer p span a{
+  color: #646464;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.4s;
+  font-size: 1.2rem;
+}
+.footer p span a:hover {
+  color: #000000;
+}
+.section {
+  height: 84vh;
+  width: 100%;
+}

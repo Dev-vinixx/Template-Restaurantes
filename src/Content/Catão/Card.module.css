@@ -40,6 +40,9 @@ display: flex;
  .columnTwo {
   min-width: 50%;
  }
+ .about p{
+  font-size: 0.8rem;
+}
 }
 .imageOne {
   min-width: 100.3%;
@@ -115,6 +118,7 @@ color: rgba(255, 255, 255, 0.842);
   width: 5vw;
   height: 4vh;
   margin-left: 15px;
+  cursor: pointer;
 }
 .about {
   display: flex;
@@ -125,4 +129,7 @@ color: rgba(255, 255, 255, 0.842);
 .about p{
   flex-wrap: wrap;
   margin-inline: 15px;
+}
+.icons:hover {
+  transform: scale(1.1);
 }
